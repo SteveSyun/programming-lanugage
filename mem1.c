@@ -28,16 +28,16 @@ void *getMem(int numBytes) {
   while((num%8)!=0){
 	  num++;
   }
-  pVoid = malloc((3*sizeof(long))+(num);
+  pVoid = malloc((3*sizeof(long))+(num));
   long *pData = pVoid;
-   *pData = numBytes; 
+   *pData = num; 
   //find local of pre
   long* precheck= pVoid+sizeof(long);
   *precheck=0xAEAEAEAEAEAEAEAEL;
   //find local of post
-  long* postcheck=pVoid+(2*sizeof(long))+numBytes; 
+  long* postcheck=pVoid+(2*sizeof(long))+num; 
   *postcheck=0xEAEAEAEAEAEAEAEAL;
-  printf("print numBytes = %d\n", (num+1)*8);
+  printf("print numBytes = %d\n", num);
   //printf("signed precheck = %p\n", *precheck);
   //printf("get precheck in decimal = %lu\n", *precheck);
   //printf("signed postcheck = %p\n", *postcheck);
