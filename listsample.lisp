@@ -357,3 +357,9 @@
     )
    )
 )  
+(defun coun(L)
+	(cond((NULL L)0)
+ 	((+ 1 (coun(cdr L))))
+        )
+    )
+~                
