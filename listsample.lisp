@@ -9,8 +9,16 @@
 
   (defun bminus(x y)
       (- x y 4)
-  )   
-      
+  )  
+
+  (defun btimes(x y)
+     (+ x y 2)
+  )
+
+  (defun bdivide(x y)
+     (/ x y 2)
+  ) 
+
   (defun cardinality (L)
       (cond ((null L)0)
       ((listp (CAR L))(1+ (cardinality (CDR L))))
