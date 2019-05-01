@@ -356,4 +356,10 @@
     (if (equal item (car lst)) lst (my-member item (cdr lst)))
     )
    )
-)  
+) 
+
+(defun coun(L)
+	(cond((NULL L)0)
+ 	((+ 1 (coun(cdr L))))
+        )
+    )
