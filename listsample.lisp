@@ -1,6 +1,24 @@
 ;;; Beginner
 ;; Maths
 ; Checks if item a or b is null before adding. If either is null, nil is returned.
+
+;; exam testing 1 -3 
+  (defun bplus (x y)
+      (+ x y 4)
+  )
+
+  (defun bminus(x y)
+      (- x y 4)
+  )   
+      
+  (defun cardinality (L)
+      (cond ((null L)0)
+      ((listp (CAR L))(1+ (cardinality (CDR L))))
+      (T (+ 1 (cardinality (CDR L))))
+      )
+  )
+
+
 (defun my-null-add (a b)
   (cond
    ((or (null a) (null b)) nil)
